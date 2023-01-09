@@ -4,21 +4,21 @@
       {
        "title": "Tablas de Quesos",
        "image": "https://i.postimg.cc/GmTgrwS6/tabla-Quesos.jpg",
-       "cost": 10,
+       "price": 10,
        "description": "Sunt exercitation officia elit qui officia do ut sunt ullamco incididunt ipsum pariatur cillum. Labore aliqua ipsum incididunt in elit minim duis adipisicing pariatur. Nulla magna in elit Lorem mollit non cillum commodo nostrud laborum consectetur.",
        "shoppingCard": true
       },
       {
        "title": "Tabla de Fiambres",
        "image": "https://i.postimg.cc/fTLg207z/tabla-Fiambres.jpg",
-       "cost": 12,
+       "price": 12,
        "description": "Dolor culpa nisi pariatur exercitation culpa quis ullamco aliqua elit. Ea elit dolor mollit dolore nulla laborum excepteur nostrud. Veniam pariatur consequat occaecat laborum dolor consectetur non magna ex. Veniam anim velit duis incididunt amet aliqua pariatur nostrud esse pariatur nulla. Aliquip dolore labore aliqua consectetur. Ut eu magna cillum voluptate quis.",
        "shoppingCard": true
       },
       {
        "title": "Papas Fritas",
        "image": "https://i.postimg.cc/fTrq6T5x/papas-Fritas.jpg",
-       "cost": 20,
+       "price": 20,
        "description": "Est ullamco ut minim tempor voluptate anim pariatur esse labore Lorem dolor culpa. Velit cillum consectetur ad irure consequat dolore duis aliqua proident quis sit sit nulla. Proident tempor est ea eu eu sint incididunt non mollit mollit cillum magna mollit.",
        "shoppingCard": true
       }

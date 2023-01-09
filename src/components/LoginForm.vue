@@ -1,5 +1,33 @@
+<script setup>
+// import { Vueform, useVueform } from "@vueform/vueform";
+
+// export default {
+//   name: 'LoginForm',
+//   mixins: [Vueform],
+//   setup: useVueform,
+//   data() {
+//     return {
+//       datosLogin: {},
+//     };
+//   },
+  
+//   methods: {
+//     chequearUsuario() {
+//       console.log("Se ejecuta chequearUsuario()");
+//       const encontrado = this.$store.state.listaUsuarios.find(
+//         (usuario) =>
+//           usuario.email == this.datosLogin.email &&
+//           usuario.password == this.datosLogin.password
+//       );
+//       console.log(`encontrado es: ${encontrado}`);
+//     },
+//   },
+// };
+</script>
+
 <template>
-  <Vueform v-model="datosLogin" endpoint="get_user">
+  <h1>Login Form</h1>
+  <!-- <Vueform v-model="datosLogin" endpoint="get_user">
     <StaticElement name="titulo"><h1>Login</h1></StaticElement>
     <GroupElement name="informacionPersonal" label="">
       <TextElement
@@ -24,35 +52,8 @@
       <router-link to="/registro">No tengo una cuenta</router-link>
       <pre>{{datosLogin}}</pre>
     </StaticElement>
-  </Vueform>
+  </Vueform> -->
 </template>
-
-<script>
-import { Vueform, useVueform } from "@vueform/vueform";
-
-export default {
-  name: 'LoginForm',
-  mixins: [Vueform],
-  setup: useVueform,
-  data() {
-    return {
-      datosLogin: {},
-    };
-  },
-  
-  methods: {
-    chequearUsuario() {
-      console.log("Se ejecuta chequearUsuario()");
-      const encontrado = this.$store.state.listaUsuarios.find(
-        (usuario) =>
-          usuario.email == this.datosLogin.email &&
-          usuario.password == this.datosLogin.password
-      );
-      console.log(`encontrado es: ${encontrado}`);
-    },
-  },
-};
-</script>
 
 <style scoped>
 </style>

@@ -1,13 +1,13 @@
 <template>
-  <div class="Registro">
+  <!-- <div class="Registro">
     <registro-form/>
-  </div>
+  </div> -->
 </template>
 
-<script>
-import RegistroForm from '../components/RegistroForm.vue'
-export default {
-    components: { RegistroForm },
-    name: 'RegistroView'
-}
+<script setup>
+// import RegistroForm from '../components/RegistroForm.vue'
+// export default {
+//     components: { RegistroForm },
+//     name: 'RegistroView'
+// }
 </script>

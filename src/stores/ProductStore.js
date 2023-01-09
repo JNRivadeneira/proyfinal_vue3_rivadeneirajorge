@@ -8,7 +8,7 @@ export const useProductStore = defineStore('ProductStore', {
   // state
   state: () => {
     return {
-      products: []
+      products: {}
     };
   },
   // actions

@@ -1,13 +1,8 @@
-<template>
-  <div class="menuEntradas">
-    <menu-entradas/>
-  </div>
-</template>
-
-<script>
+<script setup>
 import MenuEntradas from '../components/MenuEntradas.vue'
-export default {
-    components: { MenuEntradas },
-    name: 'MenuEntradasView'
-}
+
 </script>
+
+<template>
+    <MenuEntradas />
+</template>
