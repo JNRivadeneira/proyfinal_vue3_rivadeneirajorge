@@ -1,10 +1,19 @@
 <script setup>
 // import CardComponent from '../components/CardComponent.vue'
 import { useProductStore } from '../stores/ProductStore'
-import ProductCard from './ProductCard.vue';
+import { useCartStore } from '../stores/CartStore'
+import ProductCard from './ProductCard.vue'
 
-const productStore = useProductStore();
-productStore.fill();
+const productStore = useProductStore()
+const cartStore = useCartStore()
+productStore.fill()
+
+const addToCart = (count, product) => {
+  count = parseInt(count)
+  for (let index = 0; index < count; index++){
+    cartStore.items.push(product)
+  }
+}
 
 </script>
 
@@ -15,7 +24,7 @@ productStore.fill();
   </div>
   <div class="grid grid-cols-3 gap-4">
     <div v-for="(plato, index) of productStore.products[0].entradas" :key="index">
-      <ProductCard :product="plato"></ProductCard>
+      <ProductCard :product="plato" @add-to-cart="addToCart($event, product)" />
     </div>
   </div>
 </template>
