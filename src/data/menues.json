@@ -1,0 +1,44 @@
+[
+  {
+    "id": "1",
+    "title": "Entradas",
+    "image": "https://i.postimg.cc/PJkTbQv5/entradas.jpg",
+    "availableItems": "8",
+    "description": "Exercitation nostrud in reprehenderit esse sit eiusmod Lorem aliqua quis Lorem. Elit dolor sit amet culpa commodo. Laboris eu dolore incididunt ex adipisicing mollit aliqua quis ea ea sint ea ad cillum. Sint laboris quis adipisicing aliqua culpa id anim aliquip. Minim consectetur minim ut ut occaecat incididunt dolor."
+  },
+  {
+    "id": "2",
+    "title": "Pastas",
+    "image": "https://i.postimg.cc/sXW3ZNXL/pasta.jpg",
+    "availableItems": "12",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro beatae dolores dicta, quidem nulla soluta similique aliquid unde aperiam voluptas. Veniam, iste dignissimos? Odio quisquam voluptatem, voluptates blanditiis officiis magni."
+  },
+  {
+    "id": "3",
+    "title": "Carnes",
+    "image": "https://i.postimg.cc/25VkC6fr/carne.jpg",
+    "availableItems": "20",
+    "description": "Enim tempor exercitation esse ad enim officia commodo deserunt magna deserunt aute. Culpa exercitation enim commodo mollit sunt cupidatat. Culpa amet aliquip labore ullamco veniam. Voluptate cillum dolor pariatur voluptate esse. Ex in consectetur ex do enim magna sint labore."
+  },
+  {
+    "id": "4",
+    "title": "Pescados y Mariscos",
+    "image": "https://i.postimg.cc/ryS8V370/pescados.jpg",
+    "availableItems": "7",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro beatae dolores dicta, quidem nulla soluta similique aliquid unde aperiam voluptas. Veniam, iste dignissimos? Odio quisquam voluptatem, voluptates blanditiis officiis magni."
+  },
+  {
+    "id": "5",
+    "title": "Ensaladas",
+    "image": "https://i.postimg.cc/nLgHrJH7/ensaladas.jpg",
+    "availableItems": "6",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro beatae dolores dicta, quidem nulla soluta similique aliquid unde aperiam voluptas. Veniam, iste dignissimos? Odio quisquam voluptatem, voluptates blanditiis officiis magni."
+  },
+  {
+    "id": "6",
+    "title": "Veganos",
+    "image": "https://i.postimg.cc/tJtyBnFt/veganos.jpg",
+    "availableItems": "20",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro beatae dolores dicta, quidem nulla soluta similique aliquid unde aperiam voluptas. Veniam, iste dignissimos? Odio quisquam voluptatem, voluptates blanditiis officiis magni."
+  }
+]
