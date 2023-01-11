@@ -9,7 +9,7 @@ menuStore.fill()
 
 <template>
   <h1>Menu</h1>
-  <table>
+  <table v-if="menuStore.menues">
     <tr v-for="(menu, index) of menuStore.menues" :key="index">
       <td>
         <card-component :title="menu.title" :image="menu.image" :available-items="menu.availableItems">
