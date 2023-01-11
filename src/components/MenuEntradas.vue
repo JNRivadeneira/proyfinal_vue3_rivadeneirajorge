@@ -22,7 +22,7 @@ productStore.fill()
     <button class="btn btn-blue-outfilled">Ver carrito</button>
   </div>
   <div class="grid grid-cols-3 gap-4">
-    <div v-for="(plato, index) of productStore.products[0].entradas" :key="index">
+    <div v-for="(plato, index) of productStore.products[0]?.entradas" :key="index">
       <ProductCard :product="plato" @add-to-cart="cartStore.addItems($event, plato)" />
     </div>
   </div>

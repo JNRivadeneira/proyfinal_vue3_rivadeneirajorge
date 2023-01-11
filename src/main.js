@@ -10,3 +10,11 @@ const app = createApp(App)
 app.use(router)
 app.use(pinia)
 app.mount('#app')
+
+
+// import { createApp } from 'vue'
+// import { createPinia } from 'pinia'
+// import './style.css'
+// import App from './App.vue'
+
+// createApp(App).use(createPinia()).mount('#app') 

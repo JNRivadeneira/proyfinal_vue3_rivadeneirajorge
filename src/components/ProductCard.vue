@@ -21,7 +21,7 @@ const count = ref(0)
   <!-- <h1>{{ product }}</h1> -->
   <div class="w-full max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
     <a href="#">
-      <img class="p-8 rounded-t-lg" :src=product.image alt="product image" />
+      <img class="p-8 rounded-t-lg" :src="product.image" alt="product image" />
     </a>
     <div class="px-5 pb-5">
       <a href="#">
@@ -29,7 +29,7 @@ const count = ref(0)
       </a>
       <RatingStars />
       <div class="flex items-center justify-between">
-        <span class="text-2xl font-bold text-gray-900 dark:text-white">AR$ {{product.cost}}</span>
+        <span class="text-2xl font-bold text-gray-900 dark:text-white">AR$ {{product.price}}</span>
         <span>
           <AppCountInput v-model="count" :available-items="product.availableItems"/>
         </span>

@@ -26,10 +26,10 @@
        "availableItems": 3
       }
      ],
-     "pastas": [],
-     "carnes": [],
-     "pescadosMariscos": [],
-     "ensaladas": [],
-     "veganos": []
+     "pastas": [{}],
+     "carnes": [{}],
+     "pescadosMariscos": [{}],
+     "ensaladas": [{}],
+     "veganos": [{}]
     }
    ]
