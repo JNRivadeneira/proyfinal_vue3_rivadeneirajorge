@@ -3,56 +3,57 @@
 </script>
 
 <template>
-  <div>
-    <nav class="navbar navbar-expand-md navbar-nav bg-light">
-      <router-link to="/" class="navbar-brand">Proyecto</router-link>
+  <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
+    <div class="flex items-center flex-shrink-0 text-white mr-6">
+      <svg class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z" />
+      </svg>
+      <span class="font-semibold text-xl tracking-tight">Vue 2 a 3</span>
+    </div>
+    <div class="block lg:hidden">
       <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
+        class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <title>Menu</title>
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+        </svg>
       </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <router-link to="/" class="nav-link">Home</router-link>
-          </li>
-          <li class="nav-item">
-            <router-link to="/about" class="nav-link">About</router-link>
-          </li>
-          <li class="nav-item">
-            <router-link to="/carrito" class="nav-link">Carrito</router-link>
-          </li>
-
-          <li class="nav-item">
-            <router-link to="/menu" class="nav-link">Menu</router-link>
-          </li>
-
-          <li class="nav-item">
-            <router-link to="/menu/entradas" class="nav-link"
-              >MenuEntradas</router-link
-            >
-          </li>
-          <li class="nav-item">
-            <router-link to="/login" class="nav-link">Login</router-link>
-          </li>
-
-          <li class="nav-item">
-            <router-link to="/registro" class="nav-link">Registro</router-link>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-          </li>
-        </ul>
+    </div>
+    <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+      <div class="text-sm lg:flex-grow">
+        <RouterLink to="/" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+          Home
+        </RouterLink>
+        <RouterLink to="/about" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+          About
+        </RouterLink>
+        <RouterLink to="/prueba" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+          Prueba
+        </RouterLink>
+        <RouterLink to="/carrito" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+          Carrito
+        </RouterLink>
+        <RouterLink to="/menu" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+          Menu
+        </RouterLink>
+        <RouterLink to="/menu/entradas" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+          Entradas
+        </RouterLink>
+        <RouterLink to="/login" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+          Login
+        </RouterLink>
+        <RouterLink to="/registro" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+          Registro
+        </RouterLink>
       </div>
-    </nav>
-  </div>
+      <div>
+        <a href="#"
+          class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Login</a>
+      </div>
+    </div>
+  </nav>
 </template>
 
 
