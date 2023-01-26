@@ -13,6 +13,7 @@
     "@heroicons/vue": "^2.0.13",
     "axios": "^1.2.2",
     "pinia": "^2.0.28",
+    "tw-elements": "^1.0.0-alpha13",
     "vee-validate": "^4.7.3",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6",
