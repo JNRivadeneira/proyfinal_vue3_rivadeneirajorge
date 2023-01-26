@@ -20,49 +20,49 @@
       <div id="router_links_entries" class="text-sm lg:grow-0">
         <RouterLink
           to="/"
-          class="text-terciary hover:text-primary mr-4"
+          class="text-terciary hover:text-primary mr-4 mt-4"
         >
           Home
         </RouterLink>
         <RouterLink
           to="/about"
-          class=" text-terciary hover:text-primary mr-4"
+          class="text-terciary hover:text-primary mr-4 mt-4"
         >
           About
         </RouterLink>
         <RouterLink
           to="/prueba"
-          class=" text-terciary hover:text-primary mr-4"
+          class="text-terciary hover:text-primary mr-4 mt-4"
         >
           Prueba
         </RouterLink>
         <RouterLink
           to="/carrito"
-          class=" text-terciary hover:text-primary mr-4"
+          class="text-terciary hover:text-primary mr-4 mt-4"
         >
           Carrito
         </RouterLink>
         <RouterLink
           to="/menu"
-          class=" text-terciary hover:text-primary mr-4"
+          class="text-terciary hover:text-primary mr-4 mt-4"
         >
           Menu
         </RouterLink>
         <RouterLink
           to="/menu/entradas"
-          class=" text-terciary hover:text-primary mr-4"
+          class="text-terciary hover:text-primary mr-4 mt-4"
         >
           Entradas
         </RouterLink>
         <RouterLink
           to="/login"
-          class=" text-terciary hover:text-primary mr-4"
+          class="text-terciary hover:text-primary mr-4 mt-4"
         >
           Login
         </RouterLink>
         <RouterLink
           to="/registro"
-          class=" text-terciary hover:text-primary mr-4"
+          class="text-terciary hover:text-primary mr-4 mt-4"
         >
           Registro
         </RouterLink>
@@ -78,6 +78,9 @@
     <div id="ham_button" class="block shrink-0 lg:hidden">
       <button
         class="flex items-center px-3 py-2 border rounded text-terciary border-terciary bg-contrast hover:border-white hover:bg-contrast-down"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseMenu"
       >
         <svg
           class="fill-current h-3 w-3"
@@ -90,6 +93,67 @@
       </button>
     </div>
   </nav>
+  <div id="collapseMenu" class="collapse static lg:hidden">
+      <div class="w-1/3 p-6 absolute right-8 rounded-lg shadow-lg bg-contrast-down">
+        <div id="router_links_entries_collapse" class="text-sm grid justify-items-end">
+        <RouterLink
+          to="/"
+          class="text-terciary hover:text-primary p-2 block"
+        >
+          Home
+        </RouterLink>
+        <RouterLink
+          to="/about"
+          class=" text-terciary hover:text-primary p-2 block"
+        >
+          About
+        </RouterLink>
+        <RouterLink
+          to="/prueba"
+          class=" text-terciary hover:text-primary p-2 block"
+        >
+          Prueba
+        </RouterLink>
+        <RouterLink
+          to="/carrito"
+          class=" text-terciary hover:text-primary p-2 block"
+        >
+          Carrito
+        </RouterLink>
+        <RouterLink
+          to="/menu"
+          class=" text-terciary hover:text-primary p-2 block"
+        >
+          Menu
+        </RouterLink>
+        <RouterLink
+          to="/menu/entradas"
+          class=" text-terciary hover:text-primary p-2 block"
+        >
+          Entradas
+        </RouterLink>
+        <RouterLink
+          to="/login"
+          class=" text-terciary hover:text-primary p-2 block"
+        >
+          Login
+        </RouterLink>
+        <RouterLink
+          to="/registro"
+          class=" text-terciary hover:text-primary p-2 block"
+        >
+          Registro
+        </RouterLink>
+      </div>
+      <div id="login_button">
+        <a
+          href="#"
+          class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white bg-contrast hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"
+          >Login</a
+        >
+      </div>
+      </div>
+    </div>
 </template>
 
 <style scoped></style>
