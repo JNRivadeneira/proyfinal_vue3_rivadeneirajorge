@@ -64,6 +64,14 @@ const router = createRouter({
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "registro" */ '../views/PruebaView.vue')
+    },
+    {
+      path: '/index',
+      name: 'landingPage',
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import(/* webpackChunkName: "registro" */ '../views/LandingPageView.vue')
     }
   ]  
 })
