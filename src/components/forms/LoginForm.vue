@@ -1,5 +1,10 @@
 <script setup>
-
+import { useUserStore } from '../../stores/UserStore';
+const userStore = useUserStore();
+const checkUser = (whoIsLogging) => {
+    const userFound = userStore.getUser.find((registeredUsers) => (registeredUsers.nombre == whoIsLogging.name && registeredUsers.password == whoIsLogging.password))
+    return userFound;
+}
 </script>
 
 <template>
