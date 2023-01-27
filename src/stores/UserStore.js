@@ -5,9 +5,15 @@ export const useUserStore = defineStore('UserStore', {
   // state
   state: () => {
     return {
+      usuarioActivo: null,
       users,
-    }
-    // actions
-    // getters
-  }
-})
+    };
+  },
+  // getters
+  getters: {
+    getUser: (state) => {
+      return state.users
+    },
+  },
+});
+// actions
