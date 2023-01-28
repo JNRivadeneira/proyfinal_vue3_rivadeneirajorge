@@ -1,159 +1,138 @@
-<script setup></script>
+<script setup>
+import CartIcon from '../assets/icons/CartIcon.vue'
+import { ref } from 'vue';
+import { useUserStore } from '../stores/UserStore';
+const userStore = useUserStore()
+const itemsCount = ref(0)
+
+const addItem = () => { itemsCount.value++ }
+const removeItem = () => { itemsCount.value-- }
+const emptyCart = () => { itemsCount.value = 0 }
+</script>
 
 <template>
-  <nav class="flex items-center justify-between h-16 flex-nowrap bg-contrast p-4">
-    <div id="logo" class="flex items-center shrink-0 text-contrast-st mr-6">
-      <svg
-        class="fill-current h-8 w-8 mr-2"
-        width="54"
-        height="54"
-        viewBox="0 0 54 54"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"
-        />
-      </svg>
-      <span class="font-semibold text-xl tracking-tight">Proyecto</span>
-    </div>
-    <div id="router_links_group" class="w-full flex grow invisible justify-between lg:visible lg:items-baseline lg:w-auto">
-      <div id="router_links_entries" class="text-sm lg:grow-0">
-        <RouterLink
-          to="/"
-          class="text-terciary hover:text-primary mr-4 mt-4"
-        >
-          Home
-        </RouterLink>
-        <RouterLink
-          to="/about"
-          class="text-terciary hover:text-primary mr-4 mt-4"
-        >
-          About
-        </RouterLink>
-        <RouterLink
-          to="/prueba"
-          class="text-terciary hover:text-primary mr-4 mt-4"
-        >
-          Prueba
-        </RouterLink>
-        <RouterLink
-          to="/carrito"
-          class="text-terciary hover:text-primary mr-4 mt-4"
-        >
-          Carrito
-        </RouterLink>
-        <RouterLink
-          to="/menu"
-          class="text-terciary hover:text-primary mr-4 mt-4"
-        >
-          Menu
-        </RouterLink>
-        <RouterLink
-          to="/menu/entradas"
-          class="text-terciary hover:text-primary mr-4 mt-4"
-        >
-          Entradas
-        </RouterLink>
-        <RouterLink
-          to="/login"
-          class="text-terciary hover:text-primary mr-4 mt-4"
-        >
-          Login
-        </RouterLink>
-        <RouterLink
-          to="/registro"
-          class="text-terciary hover:text-primary mr-4 mt-4"
-        >
-          Registro
-        </RouterLink>
-      </div>
-      <div id="login_button">
-        <a
-          href="#"
-          class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"
-          >Login</a
-        >
-      </div>
-    </div>
-    <div id="ham_button" class="block shrink-0 lg:hidden">
-      <button
-        class="flex items-center px-3 py-2 border rounded text-terciary border-terciary bg-contrast hover:border-white hover:bg-contrast-down"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#collapseMenu"
-      >
-        <svg
-          class="fill-current h-3 w-3"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title>Menu</title>
-          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+  <div id="navbar_container" class="flex items-center justify-between bg-slate-400">
+    <!-- <nav> -->
+    <div id="top_left_menu" class="flex items-center">
+      <div id="logo" class="flex items-center shrink-0 text-contrast-st">
+        <svg class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z" />
         </svg>
-      </button>
+        <span class="font-semibold text-xl tracking-tight">Proyecto</span>
+      </div>
+      <div id="router_links_group" class="hidden lg:flex">
+        <div id="router_links_entries">
+          <RouterLink to="/" class="text-terciary hover:text-primary">
+            Home
+          </RouterLink>
+          <RouterLink to="/about" class="text-terciary hover:text-primary">
+            About
+          </RouterLink>
+          <RouterLink to="/prueba" class="text-terciary hover:text-primary">
+            Prueba
+          </RouterLink>
+          <RouterLink to="/carrito" class="text-terciary hover:text-primary">
+            Carrito
+          </RouterLink>
+          <RouterLink to="/menu" class="text-terciary hover:text-primary">
+            Menu
+          </RouterLink>
+          <RouterLink to="/menu/entradas" class="text-terciary hover:text-primary">
+            Entradas
+          </RouterLink>
+          <RouterLink to="/login" class="text-terciary hover:text-primary">
+            Login
+          </RouterLink>
+          <RouterLink to="/registro" class="text-terciary hover:text-primary">
+            Registro
+          </RouterLink>
+        </div>
+      </div>
     </div>
-  </nav>
+      <div id="top_right_menu" class="flex items-center justify-between w-56">
+        <div id="user_panel" class="flex items-center justify-between w-2/3 lg:w-full gap-1">
+            <div id="hiUser" class="flex-none">
+              Hola {{ userStore.getActiveUser }}!
+            </div>
+            <div id="cartIcon" class="flex">
+              <CartIcon :itemsCount="itemsCount" @click="addItem" />
+            </div>
+            <div id="log_buttons" class="hidden lg:flex">
+              <div id="logout_button" v-if="userStore.getActiveUser">
+                <router-link to="/"
+                  class="text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"
+                  @click="userStore.setActiveUser(null)">
+                  Logout
+                </router-link>
+              </div>
+              <div id="login_button" v-else="">
+                <router-link to="/"
+                  class="text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">
+                  Login
+                </router-link>
+              </div>
+            </div>
+          </div>
+        <div id="ham_button" class="flex lg:hidden">
+          <button
+            class="flex items-center px-3 py-2 border rounded text-terciary border-terciary bg-contrast hover:border-white hover:bg-contrast-down"
+            type="button" data-bs-toggle="collapse" data-bs-target="#collapseMenu">
+            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    <!-- </nav> -->
+  </div>
   <div id="collapseMenu" class="collapse static lg:hidden">
-      <div class="w-1/3 p-6 absolute right-8 rounded-lg shadow-lg bg-contrast-down">
-        <div id="router_links_entries_collapse" class="text-sm grid justify-items-end">
-        <RouterLink
-          to="/"
-          class="text-terciary hover:text-primary p-2 block"
-        >
+    <div class="w-1/3 p-6 absolute right-8 rounded-lg shadow-lg bg-contrast-down">
+      <div id="router_links_entries_collapse" class="text-sm grid justify-items-end">
+        <RouterLink to="/" class="text-terciary hover:text-primary p-2 block">
           Home
         </RouterLink>
-        <RouterLink
-          to="/about"
-          class=" text-terciary hover:text-primary p-2 block"
-        >
+        <RouterLink to="/about" class=" text-terciary hover:text-primary p-2 block">
           About
         </RouterLink>
-        <RouterLink
-          to="/prueba"
-          class=" text-terciary hover:text-primary p-2 block"
-        >
+        <RouterLink to="/prueba" class=" text-terciary hover:text-primary p-2 block">
           Prueba
         </RouterLink>
-        <RouterLink
-          to="/carrito"
-          class=" text-terciary hover:text-primary p-2 block"
-        >
+        <RouterLink to="/carrito" class=" text-terciary hover:text-primary p-2 block">
           Carrito
         </RouterLink>
-        <RouterLink
-          to="/menu"
-          class=" text-terciary hover:text-primary p-2 block"
-        >
+        <RouterLink to="/menu" class=" text-terciary hover:text-primary p-2 block">
           Menu
         </RouterLink>
-        <RouterLink
-          to="/menu/entradas"
-          class=" text-terciary hover:text-primary p-2 block"
-        >
+        <RouterLink to="/menu/entradas" class=" text-terciary hover:text-primary p-2 block">
           Entradas
         </RouterLink>
-        <RouterLink
-          to="/login"
-          class=" text-terciary hover:text-primary p-2 block"
-        >
+        <RouterLink to="/login" class=" text-terciary hover:text-primary p-2 block">
           Login
         </RouterLink>
-        <RouterLink
-          to="/registro"
-          class=" text-terciary hover:text-primary p-2 block"
-        >
+        <RouterLink to="/registro" class=" text-terciary hover:text-primary p-2 block">
           Registro
         </RouterLink>
       </div>
-      <div id="login_button">
-        <a
-          href="#"
+      <div v-if="userStore.getActiveUser" id="logout_button">
+        <RouterLink to="/"
           class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white bg-contrast hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"
-          >Login</a
-        >
+          @click="userStore.setActiveUser(null)">
+          Logout
+        </RouterLink>
       </div>
+      <div v-else="" id="login_button">
+        <RouterLink to="/"
+          class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white bg-contrast hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">
+          Logout
+        </RouterLink>
       </div>
     </div>
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+
+</style>
