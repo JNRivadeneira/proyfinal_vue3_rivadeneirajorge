@@ -3,7 +3,7 @@
      "createdAt": 1672768509,
      "nombre": "admin",
      "apellido": "apellido 1",
-     "email": "email 1",
+     "email": "admin@app.com",
      "fechaNacimiento": 1672768509,
      "password": "admin1234",
      "recibeAnuncios": false,
