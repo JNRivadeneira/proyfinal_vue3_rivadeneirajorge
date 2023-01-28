@@ -1,4 +1,12 @@
-<script setup></script>
+<script setup>
+import CartIcon from '../assets/icons/CartIcon.vue'
+import { ref } from 'vue';
+import { useUserStore } from '../stores/UserStore';
+const userStore = useUserStore()
+const itemsCount = ref(0)
+
+const addItem = () => { itemsCount.value++ }
+</script>
 
 <template>
   <nav class="flex items-center justify-between h-16 flex-nowrap bg-contrast p-4">
@@ -67,12 +75,24 @@
           Registro
         </RouterLink>
       </div>
-      <div id="login_button">
-        <a
-          href="#"
+      <div id="hiUser" class="text-lg text-contrast-st capitalize font-medium">Hola {{ userStore.getActiveUser }}!</div>
+      <div id="cartIcon"><CartIcon :itemsCount="itemsCount" @click="addItem"/></div>
+      <div id="logout_button" v-if="userStore.getActiveUser">
+        <router-link 
+          to="/"
           class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"
-          >Login</a
-        >
+          @click="userStore.setActiveUser(null)"
+          >
+          Logout
+        </router-link>
+      </div>
+      <div id="login_button" v-else="">
+        <router-link 
+          to="/"
+          class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"
+          >
+          Login
+        </router-link>
       </div>
     </div>
     <div id="ham_button" class="block shrink-0 lg:hidden">
@@ -145,12 +165,22 @@
           Registro
         </RouterLink>
       </div>
-      <div id="login_button">
-        <a
-          href="#"
+      <div v-if="userStore.getActiveUser" id="logout_button">
+        <RouterLink 
+          to="/" 
           class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white bg-contrast hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"
-          >Login</a
+          @click="userStore.setActiveUser(null)"
+          >
+          Logout
+        </RouterLink>
+      </div>
+      <div v-else="" id="login_button">
+        <RouterLink 
+          to="/" 
+          class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white bg-contrast hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"
         >
+          Logout
+        </RouterLink>
       </div>
       </div>
     </div>
