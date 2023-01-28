@@ -6,6 +6,8 @@ const userStore = useUserStore()
 const itemsCount = ref(0)
 
 const addItem = () => { itemsCount.value++ }
+const removeItem = () => { itemsCount.value-- }
+const emptyCart = () => { itemsCount.value = 0 }
 </script>
 
 <template>
