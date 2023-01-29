@@ -13,14 +13,12 @@ const updateValue = (value) => {
 </script>
 
 <template>
-  <span class="columns-3 gap-0">
-    <button
-      class="cursor-pointer bg-gray-200 px-2 rounded-l"
-      @click="updateValue(modelValue > 0 ? modelValue - 1 : null)"
-    >
-      -
-    </button>
+  <div class="flex flex-row ">
+    <a href="#" class="cursor-pointer basis-1/3 bg-gray-200 px-2 rounded-tl-lg"
+    @click="updateValue(modelValue > 0 ? modelValue - 1 : null)">-
+    </a>
     <input
+      class="basis-1/3 text-primary"
       :value="modelValue"
       type="number"
       min="0"
@@ -28,13 +26,11 @@ const updateValue = (value) => {
       @input="updateValue($event.target.value)"
       readonly
     />
-    <button
-      class="bg-gray-200 px-2 rounded-r cursor-pointer"
-      @click="updateValue(modelValue + 1)"
-    >
-      +
-    </button>
-  </span>
+    <a href="#" class="cursor-pointer basis-1/3 bg-gray-200 px-2 rounded-tr-lg"
+      @click="updateValue(modelValue + 1)">+
+    </a>
+    
+  </div>
 </template>
 
 <style lang="pcss">

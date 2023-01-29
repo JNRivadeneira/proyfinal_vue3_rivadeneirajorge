@@ -18,10 +18,7 @@ productStore.fill()
 
 <template>
   <h1>Entradas</h1>
-  <div class="d-grip gap-2 d-flex justify-content-end">
-    <button class="btn btn-blue-outfilled">Ver carrito</button>
-  </div>
-  <div v-if="productStore.products[0]" class="grid grid-cols-3 gap-4">
+  <div v-if="productStore.products[0]" class="grid grid-cols-2 md:grid-cols-3 gap-4 p-2">
     <div v-for="(plato, index) of productStore.products[0].entradas" :key="index">
       <ProductCard :product="plato" @add-to-cart="cartStore.addItems($event, plato)" />
     </div>
