@@ -18,7 +18,7 @@ const updateValue = (value) => {
     @click="updateValue(modelValue > 0 ? modelValue - 1 : null)">-
     </a>
     <input
-      class="basis-1/3 text-primary border-slate-200"
+      class="basis-1/3 text-primary"
       :value="modelValue"
       type="number"
       min="0"
