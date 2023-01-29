@@ -1,17 +1,34 @@
 import { defineStore } from "pinia";
+import { ref, computed } from "vue";
 
-export const useCartStore = defineStore("CartStore", {
-  state: () => {
-    return {
-      items: [],
-    };
-  },
-  actions: {
-    addItems(count, item) {
-      count = parseInt(count);
-      for (let index = 0; index < count; index++) {
-        this.items.push({ ...item }); // usar spread permite clonar los items, de manera que no estaremos pasando los objetos por referencia, sino por valor. Evitando bugs
-      }
-    },
-  },
-});
+export const useCartStore = defineStore("CartStore", () => {
+// state -> ref()
+const items = ref([])
+// getters -> computed()
+
+// actions -> funtion()
+function addItems (count, item) {
+  count = parseInt(count)
+  for (let index = 0; index < count; index++){
+    items.value.push({ ...item })
+  }
+}
+// return
+return {items, addItems}
+})
+
+// export const useCartStore = defineStore("CartStore", {
+//   state: () => {
+//     return {
+//       items: [],
+//     };
+//   },
+//   actions: {
+//     addItems(count, item) {
+//       count = parseInt(count);
+//       for (let index = 0; index < count; index++) {
+//         this.items.push({ ...item }); // usar spread permite clonar los items, de manera que no estaremos pasando los objetos por referencia, sino por valor. Evitando bugs
+//       }
+//     },
+//   },
+// });
