@@ -31,49 +31,5 @@
      "recibeAnuncios": false,
      "admin": false,
      "id": "3"
-    },
-    {
-     "createdAt": 1672768329,
-     "nombre": "nombre 4",
-     "apellido": "apellido 4",
-     "email": "email 4",
-     "fechaNacimiento": 1672768329,
-     "password": "password 4",
-     "recibeAnuncios": false,
-     "admin": false,
-     "id": "4"
-    },
-    {
-     "createdAt": 1672768269,
-     "nombre": "nombre 5",
-     "apellido": "apellido 5",
-     "email": "email 5",
-     "fechaNacimiento": 1672768269,
-     "password": "password 5",
-     "recibeAnuncios": false,
-     "admin": false,
-     "id": "5"
-    },
-    {
-     "createdAt": 1672768209,
-     "nombre": "nombre 6",
-     "apellido": "apellido 6",
-     "email": "email 6",
-     "fechaNacimiento": 1672768209,
-     "password": "password 6",
-     "recibeAnuncios": false,
-     "admin": false,
-     "id": "6"
-    },
-    {
-     "createdAt": 1672768149,
-     "nombre": "nombre 7",
-     "apellido": "apellido 7",
-     "email": "email 7",
-     "fechaNacimiento": 1672768149,
-     "password": "password 7",
-     "recibeAnuncios": false,
-     "admin": false,
-     "id": "7"
     }
-   ]
+]

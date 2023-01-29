@@ -70,9 +70,9 @@ function logOut(){
           <div id="log_buttons" class="hidden lg:flex">
             <div id="logout_button" v-if="userStore.getActiveUser">
               <router-link to="/"
-                class="text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"
+                class="flex text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"
                 @click="logOut">
-                Logout
+                Salir
               </router-link>
             </div>
             <div id="login_button" v-else="">
@@ -126,8 +126,8 @@ function logOut(){
       <div v-if="userStore.getActiveUser" id="logout_button">
         <RouterLink to="/"
           class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white bg-contrast hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"
-          @click="userStore.setActiveUser(null)">
-          Logout
+          @click="logOut">
+          Salir
         </RouterLink>
       </div>
       <div v-else="" id="login_button">
