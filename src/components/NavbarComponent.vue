@@ -89,7 +89,7 @@ const emptyCart = () => { itemsCount.value = 0 }
     <!-- </nav> -->
   </div>
   <div id="collapseMenu" class="collapse static lg:hidden">
-    <div class="w-1/3 p-6 absolute right-8 rounded-lg shadow-lg bg-contrast-down">
+    <div class="w-1/3 p-6 absolute right-5 rounded-lg shadow-lg bg-contrast-down">
       <div id="router_links_entries_collapse" class="text-sm grid justify-items-end">
         <RouterLink to="/" class="text-terciary hover:text-primary p-2 block">
           Home
