@@ -16,6 +16,11 @@ function logOut(){
   router.push("/")
 }
 
+function prueba(){
+  console.log(cartStore.getItemsCount)
+  console.log(cartStore.isEmpty)
+}
+
 </script>
 
 <template>
@@ -65,7 +70,7 @@ function logOut(){
             Hola {{ userStore.getActiveUser }}!
           </div>
           <div id="cartIcon" class="flex">
-            <CartIcon :itemsCount="cartStore.getItemsCount" @click="cartStore.removeAllItems" />
+            <CartIcon :itemsCount="cartStore.getItemsCount" @click="prueba" />
           </div>
           <div id="log_buttons" class="hidden lg:flex">
             <div id="logout_button" v-if="userStore.getActiveUser">
