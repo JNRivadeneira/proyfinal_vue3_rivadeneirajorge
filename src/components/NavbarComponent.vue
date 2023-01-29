@@ -60,7 +60,7 @@ const emptyCart = () => { itemsCount.value = 0 }
             Hola {{ userStore.getActiveUser }}!
           </div>
           <div id="cartIcon" class="flex">
-            <CartIcon :itemsCount="itemsCount" @click="cartStore.removeAllItems" />
+            <CartIcon :itemsCount="cartStore.getItemsCount" @click="cartStore.removeAllItems" />
           </div>
           <div id="log_buttons" class="hidden lg:flex">
             <div id="logout_button" v-if="userStore.getActiveUser">
