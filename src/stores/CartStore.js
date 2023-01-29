@@ -5,7 +5,7 @@ export const useCartStore = defineStore("CartStore", () => {
 // state -> ref()
 const items = ref([])
 // getters -> computed()
-
+const getItemsCount = computed(() => {return items.value.length})
 // actions -> funtion()
 function addItems (count, item) {
   count = parseInt(count)
@@ -14,7 +14,7 @@ function addItems (count, item) {
   }
 }
 // return
-return {items, addItems}
+return {items, addItems, getItemsCount}
 })
 
 // export const useCartStore = defineStore("CartStore", {
