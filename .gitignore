@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# mis archivos exceptuados
+
+src/components/pruebas/*
