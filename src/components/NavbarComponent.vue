@@ -1,16 +1,21 @@
 <script setup>
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 import { useUserStore } from '../stores/UserStore';
 import { useCartStore } from '../stores/CartStore';
 import CartIcon from '../assets/icons/CartIcon.vue'
 
 const userStore = useUserStore()
 const cartStore = useCartStore()
-const itemsCount = ref(0)
+const router = useRouter()
 
-const addItem = () => { itemsCount.value++ }
-const removeItem = () => { itemsCount.value-- }
-const emptyCart = () => { itemsCount.value = 0 }
+function logOut(){
+  console.log(`${userStore.getActiveUser} ha cerrado sesión!`)
+  userStore.setActiveUser(null)
+  cartStore.removeAllItems()
+  router.push("/")
+}
+
 </script>
 
 <template>
@@ -66,7 +71,7 @@ const emptyCart = () => { itemsCount.value = 0 }
             <div id="logout_button" v-if="userStore.getActiveUser">
               <router-link to="/"
                 class="text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"
-                @click="userStore.setActiveUser(null)">
+                @click="logOut">
                 Logout
               </router-link>
             </div>
