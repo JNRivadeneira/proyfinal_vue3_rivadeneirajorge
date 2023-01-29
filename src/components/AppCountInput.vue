@@ -14,7 +14,7 @@ const updateValue = (value) => {
 
 <template>
   <div class="flex flex-row ">
-    <a href="#" class="cursor-pointer basis-1/3 bg-gray-200 px-2 rounded-tl-lg"
+    <a class="cursor-pointer basis-1/3 bg-gray-200 px-2 rounded-tl-lg"
     @click="updateValue(modelValue > 0 ? modelValue - 1 : null)">-
     </a>
     <input
@@ -26,7 +26,7 @@ const updateValue = (value) => {
       @input="updateValue($event.target.value)"
       readonly
     />
-    <a href="#" class="cursor-pointer basis-1/3 bg-gray-200 px-2 rounded-tr-lg"
+    <a class="cursor-pointer basis-1/3 bg-gray-200 px-2 rounded-tr-lg"
       @click="updateValue(modelValue + 1)">+
     </a>
     
