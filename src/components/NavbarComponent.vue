@@ -1,8 +1,11 @@
 <script setup>
-import CartIcon from '../assets/icons/CartIcon.vue'
 import { ref } from 'vue';
 import { useUserStore } from '../stores/UserStore';
+import { useCartStore } from '../stores/CartStore';
+import CartIcon from '../assets/icons/CartIcon.vue'
+
 const userStore = useUserStore()
+const cartStore = useCartStore()
 const itemsCount = ref(0)
 
 const addItem = () => { itemsCount.value++ }
@@ -57,7 +60,7 @@ const emptyCart = () => { itemsCount.value = 0 }
             Hola {{ userStore.getActiveUser }}!
           </div>
           <div id="cartIcon" class="flex">
-            <CartIcon :itemsCount="itemsCount" @click="addItem" />
+            <CartIcon :itemsCount="itemsCount" @click="cartStore.removeAllItems" />
           </div>
           <div id="log_buttons" class="hidden lg:flex">
             <div id="logout_button" v-if="userStore.getActiveUser">

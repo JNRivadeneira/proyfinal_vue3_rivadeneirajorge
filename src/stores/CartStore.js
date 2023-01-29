@@ -13,8 +13,10 @@ function addItems (count, item) {
     items.value.push({ ...item })
   }
 }
+
+function removeAllItems() { items.value = []}
 // return
-return {items, addItems, getItemsCount}
+return {items, addItems, getItemsCount, removeAllItems}
 })
 
 // export const useCartStore = defineStore("CartStore", {
