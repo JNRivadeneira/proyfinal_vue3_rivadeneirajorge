@@ -3,7 +3,7 @@ import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { useUserStore } from '../stores/UserStore';
 import { useCartStore } from '../stores/CartStore';
-import CartIcon from '../assets/icons/CartIcon.vue'
+import CartWidget from './CartWidget.vue';
 
 const userStore = useUserStore()
 const cartStore = useCartStore()
@@ -14,6 +14,11 @@ function logOut(){
   userStore.setActiveUser(null)
   cartStore.removeAllItems()
   router.push("/")
+}
+
+function prueba(){
+  console.log(cartStore.getItemsCount)
+  console.log(cartStore.isEmpty)
 }
 
 </script>
@@ -65,7 +70,8 @@ function logOut(){
             Hola {{ userStore.getActiveUser }}!
           </div>
           <div id="cartIcon" class="flex">
-            <CartIcon :itemsCount="cartStore.getItemsCount" @click="cartStore.removeAllItems" />
+            <!-- <CartIcon :itemsCount="cartStore.getItemsCount" @click="prueba" /> -->
+            <CartWidget />
           </div>
           <div id="log_buttons" class="hidden lg:flex">
             <div id="logout_button" v-if="userStore.getActiveUser">
