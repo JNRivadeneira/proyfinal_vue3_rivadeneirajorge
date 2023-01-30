@@ -16,7 +16,6 @@ const grouped = computed(() => {
   return inOrder
 })
 const total = computed(() => {return items.value.reduce((p, c) => p + c.price, 0)})
-// const groupCount = computed(() => {return (title) => {return console.log(title)}})
 // actions -> funtion()
 function addItems (count, item) {
   count = parseInt(count)

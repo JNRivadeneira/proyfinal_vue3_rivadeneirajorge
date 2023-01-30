@@ -1,9 +1,9 @@
 <script setup>
 import { ref } from "vue";
 import { useCartStore } from "../stores/CartStore";
-import AppModalOverlay from "./pruebas/AppModalOverlay.vue";
-import AppButton from "./pruebas/AppButton.vue";
-import CartItem from "./pruebas/CartItem.vue";
+import AppModalOverlay from "./AppModalOverlay.vue";
+import AppButton from "./AppButton.vue";
+import CartItem from "./CartItem.vue";
 import CartIcon from "../assets/icons/CartIcon.vue";
 
 const cartStore = useCartStore();
@@ -14,27 +14,19 @@ const active = ref(false);
   <div class="relative">
     <!-- el icono se muestra siempre -->
     <span class="cursor-pointer" @click="active = true">
-      <CartIcon :itemsCount="cartStore.getItemsCount"/>
+      <CartIcon :itemsCount="cartStore.getItemsCount" />
     </span>
     <AppModalOverlay :active="active" @close="active = false">
       <div v-if="!cartStore.isEmpty">
-        <ul class="items-in-cart">
-          <CartItem
-            v-for="(items, title) in cartStore.grouped"
-            :key="title"
-            :product="items[0]"
-            :count="items.length"
-            @updateCount="cartStore.setItemCount(items[0], $event)"
-            @clear="cartStore.clearItem(title)"
-          />
-        </ul>
+        <table class="table w-full min-w-fit">
+          <CartItem v-for="(items, title) in cartStore.grouped" :key="title" :product="items[0]" :count="items.length"
+            @updateCount="cartStore.setItemCount(items[0], $event)" @clear="cartStore.clearItem(title)" />
+        </table>
         <div class="flex justify-end text-2xl mb-5">
           Total: <strong>${{ cartStore.total }}</strong>
         </div>
         <div class="flex justify-end">
-          <AppButton class="secondary mr-2" @click="cartStore.removeAllItems"
-            >Vaciar carrito</AppButton
-          >
+          <AppButton class="secondary mr-2" @click="cartStore.removeAllItems">Vaciar carrito</AppButton>
           <!-- <AppButton class="primary" @click="cartStore.checkout"
             >Checkout</AppButton
           > -->
