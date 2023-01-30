@@ -16,7 +16,7 @@ defineEmits(["updateCount", "clear"]);
     </td>
     <td>$ {{ count * product.price }}</td>
     <td @click="$emit('clear')">
-      <TrashIcon />
+      <TrashIcon class=""/>
     </td>
   </tr>
 </template>
