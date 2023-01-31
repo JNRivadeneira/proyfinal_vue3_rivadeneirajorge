@@ -4,6 +4,6 @@ import NewProductForm from '../components/forms/NewProductForm.vue';
 </script>
 
 <template>
-  <h1>New product</h1>
+  <p>Nuevo producto view</p>
   <NewProductForm />
 </template>

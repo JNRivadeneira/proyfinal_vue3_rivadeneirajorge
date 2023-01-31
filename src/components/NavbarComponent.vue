@@ -56,7 +56,7 @@ function prueba(){
             Registro
           </RouterLink>
           <RouterLink to="/newproduct" class="p-2 text-terciary hover:text-primary">
-            Registro
+            Nuevo Producto
           </RouterLink>
         </div>
       </div>
