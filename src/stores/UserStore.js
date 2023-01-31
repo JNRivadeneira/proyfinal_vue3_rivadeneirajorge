@@ -16,9 +16,6 @@ export const useUserStore = defineStore('UserStore', () => {
   // getters -> computed()
   const getUsers = computed(() => { return registeredUsers.value })
   const getActiveUser = computed(() => { return activeUser.value })
-  // const addNewUser = computed(() => {
-    
-  // })
 
   // actions -> function()
   function setActiveUser(user) { activeUser.value = user }
@@ -27,19 +24,12 @@ export const useUserStore = defineStore('UserStore', () => {
   }
 
   async function addNewUser(user){
-    // console.log("1: registeredUsers.value: ", registeredUsers.value)
-    // console.log("2: user: ", user)
-    // let data = JSON.stringify(registeredUsers.value.push(user))
-    // console.log("3: data: ", data)
     registeredUsers.value.push(user)
     await axios.put(URLPUT, registeredUsers.value, requestConfig)
       .then ((response) => console.log(response))
       .catch((error) => console.log(error))
   }
-
-  
-  // }
-
+ 
   // return
   return { registeredUsers, activeUser, getUsers, getActiveUser, setActiveUser, fill, addNewUser}
 })

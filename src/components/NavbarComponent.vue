@@ -52,9 +52,6 @@ function prueba(){
           <RouterLink to="/menu/entradas" class="p-2 text-terciary hover:text-primary">
             Entradas
           </RouterLink>
-          <RouterLink to="/login" class="p-2 text-terciary hover:text-primary">
-            Login
-          </RouterLink>
           <RouterLink to="/registro" class="p-2 text-terciary hover:text-primary">
             Registro
           </RouterLink>
@@ -110,17 +107,11 @@ function prueba(){
         <RouterLink to="/prueba" class=" text-terciary hover:text-primary p-2 block">
           Prueba
         </RouterLink>
-        <RouterLink to="/carrito" class=" text-terciary hover:text-primary p-2 block">
-          Carrito
-        </RouterLink>
         <RouterLink to="/menu" class=" text-terciary hover:text-primary p-2 block">
           Menu
         </RouterLink>
         <RouterLink to="/menu/entradas" class=" text-terciary hover:text-primary p-2 block">
           Entradas
-        </RouterLink>
-        <RouterLink to="/login" class=" text-terciary hover:text-primary p-2 block">
-          Login
         </RouterLink>
         <RouterLink to="/registro" class=" text-terciary hover:text-primary p-2 block">
           Registro
