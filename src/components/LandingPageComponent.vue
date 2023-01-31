@@ -4,7 +4,7 @@ import { useUserStore } from '../stores/UserStore'
 
 const userStore = useUserStore()
 userStore.loadUsers()
-const registeredUsers = userStore.getUsers
+
 // const found = ref({})
 
 const whoIsLogging = {
@@ -12,7 +12,8 @@ const whoIsLogging = {
   password: ""
 }
 const validateUser = (whoIsLogging) => {
-  const found = registeredUsers.find((registeredUser) => (registeredUser.nombre == whoIsLogging.nombre && registeredUser.password == whoIsLogging.password))
+  const registeredUsers = userStore.getUsers
+  const found = registeredUsers.find((registeredUser) => (registeredUser.email == whoIsLogging.email && registeredUser.password == whoIsLogging.password))
   if (found) {
     userStore.setActiveUser(found.nombre)
   }

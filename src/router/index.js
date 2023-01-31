@@ -18,14 +18,6 @@ const router = createRouter({
       component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
     },
     {
-      path: '/carrito',
-      name: 'carrito',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "carrito" */ '../views/CarritoView.vue')
-    },
-    {
       path: '/menu/entradas',
       name: 'menuEntradas',
       // route level code-splitting
@@ -63,7 +55,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "registro" */ '../views/PruebaView.vue')
+      component: () => import(/* webpackChunkName: "prueba" */ '../views/PruebaView.vue')
     },
     {
       path: '/index',
@@ -71,7 +63,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "registro" */ '../views/LandingPageView.vue')
+      component: () => import(/* webpackChunkName: "landingPage" */ '../views/LandingPageView.vue')
     }
   ]  
 })

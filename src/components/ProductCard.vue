@@ -10,11 +10,8 @@ const props = defineProps({
 
 defineEmits(['addToCart'])
 
-const click = (title) => {
-  console.log(`CLICK on ${title}`)
-}
-
 const count = ref(0)
+
 
 </script>
 
@@ -37,7 +34,7 @@ const count = ref(0)
         <AppCountInput v-model="count" :available-items="product.availableItems" />
         <a 
           title="Agregar al carrito"
-          class="flex justify-center items-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-b-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          class="flex justify-center items-center text-white bg-primary hover:bg-secondary focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-b-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           @click="$emit('addToCart', count), (count = 0)">
           <ShoppingCartIcon class="h-7 w-7 text-blue-200" />
         </a>
