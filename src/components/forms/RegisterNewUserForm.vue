@@ -1,11 +1,15 @@
 <script setup>
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
+import { useUserStore } from '../../stores/UserStore';
 
 const router = useRouter()
-const user = ref({})
+const userStore = useUserStore()
+const newUser = ref({})
 
-const loadData = () => { console.log("Envía datos", user.value) }
+userStore.fill()
+
+const loadData = () => { console.log("Envía datos", newUser.value) }
 const goToLoginView = () => { router.push("/login") }
 </script>
 
@@ -14,11 +18,11 @@ const goToLoginView = () => { router.push("/login") }
     <div class="max-w-lg p-6 m-auto bg-white rounded shadow-lg ring-2 ring-purple-800/50">
         <h1 class="text-3xl font-semibold text-center text-purple-700">REGISTRATE</h1>
 
-        <form @submit.prevent="loadData" class="mt-6">
+        <form @submit.prevent="userStore.addNewUser(newUser)" class="mt-6">
             <div>
                 <label for="nombre" class="block text-sm text-gray-800">Nombre</label>
                 <input
-                  v-model="user.name"
+                  v-model="newUser.nombre"
                   type="text"
                   name="nombre"
                   class="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40">
@@ -26,7 +30,7 @@ const goToLoginView = () => { router.push("/login") }
             <div>
                 <label for="apellido" class="block text-sm text-gray-800">Apellido</label>
                 <input
-                  v-model="user.lastname"
+                  v-model="newUser.apellido"
                   type="text"
                   name="apellido"
                   class="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40">
@@ -34,7 +38,7 @@ const goToLoginView = () => { router.push("/login") }
             <div>
                 <label for="email" class="block text-sm text-gray-800">Email</label>
                 <input
-                  v-model="user.email"
+                  v-model="newUser.email"
                   type="email"
                   name="email"
                   class="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40">
@@ -43,7 +47,7 @@ const goToLoginView = () => { router.push("/login") }
                 <div>
                     <label for="password" class="block text-sm text-gray-800">Contraseña</label>
                     <input
-                      v-model="user.password"
+                      v-model="newUser.password"
                       type="password"
                       name="password"
                       class="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40">
