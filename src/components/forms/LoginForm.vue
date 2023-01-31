@@ -2,16 +2,16 @@
 import { useUserStore } from '../../stores/UserStore';
 
 const userStore = useUserStore()
-userStore.loadUsers()
-const registeredUsers = userStore.getUsers
-// const found = ref({})
+userStore.fill()
 
 const whoIsLogging = {
   email: "",
   password: ""
 }
 const validateUser = (whoIsLogging) => {
-  console.log("Se presionó el botón")  
+  const registeredUsers = userStore.getUsers
+  console.log("1: Se presionó el botón")
+  console.log(registeredUsers)
   const found = registeredUsers.find((registeredUser) => (registeredUser.email == whoIsLogging.email && registeredUser.password == whoIsLogging.password))
   if (found) {
     userStore.setActiveUser(found.nombre)
@@ -21,7 +21,7 @@ const validateUser = (whoIsLogging) => {
 
 <template>
   <div class="relative flex flex-col justify-center min-h-screen overflow-hidden">
-    <div class="w-full p-6 m-auto bg-white rounded shadow-lg ring-2 ring-purple-800/50 lg:max-w-md">
+    <div class="max-w-lg p-6 m-auto bg-white rounded shadow-lg ring-2 ring-purple-800/50">
         <h1 class="text-3xl font-semibold text-center text-purple-700">LOGIN</h1>
 
         <form @submit.prevent="validateUser(whoIsLogging)" class="mt-6">
