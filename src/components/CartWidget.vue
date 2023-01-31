@@ -20,7 +20,7 @@ const active = ref(false);
       <div v-if="!cartStore.isEmpty">
         <table class="table w-full min-w-fit">
           <CartItem v-for="(items, title) in cartStore.grouped" :key="title" :product="items[0]" :count="items.length"
-            @updateCount="cartStore.setItemCount(items[0], $event)" @clear="cartStore.clearItem(title)" />
+            @updateCount="cartStore.setItemCount(items[0], $event)" @clear="cartStore.clearItem(title)" class="bg-gray-100 even:bg-gray-300"/>
         </table>
         <div class="flex justify-end text-2xl mb-5">
           Total: <strong>${{ cartStore.total }}</strong>
@@ -38,13 +38,5 @@ const active = ref(false);
 </template>
 
 <style lang="pcss" scoped>
-.items-in-cart{
-  @apply mb-5;
-}
-.items-in-cart li{
-  @apply flex justify-between p-2;
-}
-.items-in-cart li:nth-of-type(even){
-  @apply bg-gray-300;
-}
+
 </style>

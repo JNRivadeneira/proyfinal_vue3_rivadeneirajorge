@@ -10,11 +10,8 @@ const props = defineProps({
 
 defineEmits(['addToCart'])
 
-const click = (title) => {
-  console.log(`CLICK on ${title}`)
-}
-
 const count = ref(0)
+
 
 </script>
 

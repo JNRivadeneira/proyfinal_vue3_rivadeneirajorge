@@ -1,19 +1,12 @@
 <script setup>
-import { useProductStore } from '../stores/ProductStore'
-import { useCartStore } from '../stores/CartStore'
-import ProductCard from './ProductCard.vue'
+  import { useProductStore } from '../stores/ProductStore'
+  import { useCartStore } from '../stores/CartStore'
+  import ProductCard from './ProductCard.vue'
 
-const productStore = useProductStore()
-const cartStore = useCartStore()
-productStore.fill()
+  const productStore = useProductStore()
+  const cartStore = useCartStore()
 
-// const addToCart = (count, product) => {
-//   count = parseInt(count)
-//   for (let index = 0; index < count; index++){
-//     cartStore.items.push(product)
-//   }
-// }
-
+  productStore.fill()
 </script>
 
 <template>
@@ -25,6 +18,4 @@ productStore.fill()
   </div>
 </template>
 
-<style>
-
-</style>
+<style></style>
