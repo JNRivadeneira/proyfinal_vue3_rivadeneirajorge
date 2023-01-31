@@ -11,8 +11,8 @@
 
 <template>
   <h1>Entradas</h1>
-  <div v-if="productStore.products[0]" class="grid grid-cols-2 md:grid-cols-3 gap-4 p-2">
-    <div v-for="(plato, index) of productStore.products[0].entradas" :key="index">
+  <div v-if="productStore.entradas" class="grid grid-cols-2 md:grid-cols-3 gap-4 p-2">
+    <div v-for="(plato, index) of productStore.entradas" :key="index">
       <ProductCard :product="plato" @add-to-cart="cartStore.addItems($event, plato)" />
     </div>
   </div>
