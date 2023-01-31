@@ -55,7 +55,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "registro" */ '../views/PruebaView.vue')
+      component: () => import(/* webpackChunkName: "prueba" */ '../views/PruebaView.vue')
     },
     {
       path: '/index',
@@ -63,7 +63,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "registro" */ '../views/LandingPageView.vue')
+      component: () => import(/* webpackChunkName: "landingPage" */ '../views/LandingPageView.vue')
     }
   ]  
 })

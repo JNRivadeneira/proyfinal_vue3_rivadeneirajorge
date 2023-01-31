@@ -1,9 +1,12 @@
 <script setup>
-import { ref } from 'vue';
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 
+const router = useRouter()
 const user = ref({})
 
 const loadData = () => { console.log("Envía datos", user.value) }
+const goToLoginView = () => { router.push("/login") }
 </script>
 
 <template>
@@ -62,8 +65,8 @@ const loadData = () => { console.log("Envía datos", user.value) }
                 </div>
             </div>
         </form>
-        <p class="mt-8 text-xs font-light text-center text-gray-700"> Ya tienes cuenta? <a href="#"
-                class="font-medium text-purple-600 hover:underline">Login</a></p>
+        <p class="mt-8 text-xs font-light text-center text-gray-700"> Ya tienes cuenta? <span @click="goToLoginView" 
+                class="cursor-pointer font-medium text-purple-600 hover:underline">Login</span></p>
     </div>
 </div>
 </template>

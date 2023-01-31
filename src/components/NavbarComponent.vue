@@ -46,9 +46,6 @@ function prueba(){
           <RouterLink to="/prueba" class="p-2 text-terciary hover:text-primary">
             Prueba
           </RouterLink>
-          <RouterLink to="/carrito" class="p-2 text-terciary hover:text-primary">
-            Carrito
-          </RouterLink>
           <RouterLink to="/menu" class="p-2 text-terciary hover:text-primary">
             Menu
           </RouterLink>

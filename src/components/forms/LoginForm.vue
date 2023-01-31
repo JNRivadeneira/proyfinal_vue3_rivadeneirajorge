@@ -1,7 +1,11 @@
 <script setup>
-import { useUserStore } from '../../stores/UserStore';
+import { useUserStore } from '../../stores/UserStore'
+import { useRouter } from 'vue-router'
 
 const userStore = useUserStore()
+const router = useRouter()
+
+const goToRegistroView = () => { router.push("/registro") }
 userStore.fill()
 
 const whoIsLogging = {
@@ -10,8 +14,6 @@ const whoIsLogging = {
 }
 const validateUser = (whoIsLogging) => {
   const registeredUsers = userStore.getUsers
-  console.log("1: Se presionó el botón")
-  console.log(registeredUsers)
   const found = registeredUsers.find((registeredUser) => (registeredUser.email == whoIsLogging.email && registeredUser.password == whoIsLogging.password))
   if (found) {
     userStore.setActiveUser(found.nombre)
@@ -40,7 +42,7 @@ const validateUser = (whoIsLogging) => {
                         type="password"
                         class="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40">
                 </div>
-                <a href="#" class="text-xs text-gray-600 hover:underline">Forget Password?</a>
+                <!-- <a href="#" class="text-xs text-gray-600 hover:underline">Forget Password?</a> -->
                 <div class="mt-6">
                     <button
                         
@@ -50,8 +52,8 @@ const validateUser = (whoIsLogging) => {
                 </div>
             </div>
         </form>
-        <p class="mt-8 text-xs font-light text-center text-gray-700"> Si aún no eres cliente <a href="#"
-                class="font-medium text-purple-600 hover:underline">Registrate</a></p>
+        <p class="mt-8 text-xs font-light text-center text-gray-700"> Si aún no eres cliente <span @click="goToRegistroView"
+                class="cursor-pointer font-medium text-purple-600 hover:underline">Registrate</span></p>
     </div>
 </div>
 </template>
