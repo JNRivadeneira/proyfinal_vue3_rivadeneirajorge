@@ -1,28 +1,19 @@
 <script setup>
-import CardComponent from '../components/CardComponent.vue'
-import { useMenuStore } from '../stores/MenuStore';
+  import { useMenuStore } from '../stores/MenuStore';
+  import ProductCard from './ProductCard.vue';
 
-const menuStore = useMenuStore()
-menuStore.fill()
-
+  const menuStore = useMenuStore()
+  menuStore.fill()
 </script>
 
 <template>
   <h1>Menu</h1>
-  <table v-if="menuStore.menues">
-    <tr v-for="(menu, index) of menuStore.menues" :key="index">
-      <td>
-        <card-component :title="menu.title" :image="menu.image" :available-items="menu.availableItems">
-        </card-component>
-
-      </td>
-      <td>
-        <p>{{ menu.description }}</p>
-      </td>
-    </tr>
-  </table>
+  <div v-if="menuStore.menues" class="grid grid-cols-2 gap-4 p-4">
+    <div v-for="(menu, index) of menuStore.menues" :key="index">
+      <ProductCard :product="menu" />
+      <p>{{ menu.description }}</p>
+    </div>
+  </div>
 </template>
 
-<style>
-
-</style>
+<style></style>
