@@ -1,0 +1,143 @@
+{
+
+"pastas":[
+    {
+      "title": "Fettuccine Alfredo",
+      "image": "https://i.postimg.cc/pXW0RX1b/pastaalfredo.jpg",
+      "price": 10,
+      "description": " Un clásico italiano. Pasta, mantequilla y parmesano. El queso y la mantequilla se derriten para formar una salsa de finas terminaciones.",
+      "shoppingCard": true,
+      "availableItems": 3
+    },
+    {
+      "title": "Espagueti a la boloñesa",
+      "image": "https://i.postimg.cc/N0SV0q28/boloniesa.jpg",
+      "price": 12,
+      "description": "Fideos cintas acompañados con una salsa de lenta cocción de carne picada, panceta, cebolla, tomate, vino blanco, caldo de carne y otros ingredientes que estimulan tus sentidos. ",
+      "shoppingCard": true,
+      "availableItems": 3
+    },
+    {
+      "title": "Pastas con Verduras",
+      "image": "https://i.postimg.cc/tTFrC1jy/verduras.jpg",
+      "price": 20,
+      "description": "Pasta con verduras salteadas y aceite de oliva, fresca combinación de verduras.",
+      "shoppingCard": true,
+      "availableItems": 5
+    }
+  ],
+
+
+
+"carnes":[
+{
+    "title": "Lomo de ternera",
+    "image": "https://i.postimg.cc/q7Bh7qCn/lomo.jpg",
+    "price": 10,
+    "description": " Con una parrilla ya caliente a fuego medio, colocamos el lomo de 500g y mantenemos la temperatura por aproximadamente 30 a 40 minutos. Un platillo para pacientes",
+    "shoppingCard": true,
+    "availableItems": 10
+},
+{
+    "title": "Entraña a las brasas",
+    "image": "https://i.postimg.cc/sXqvKJH9/entra-a.jpg",
+    "price": 12,
+    "description": "El corte más sabroso del Novillo. Su sabor intenso, su jugosidad y la fina capa de grasa que lo recubre hacen de este corte uno de los más característicos del asado argentino",
+    "shoppingCard": true,
+    "availableItems": 7
+},
+{
+    "title": "Brochetas calientes",
+    "image": "https://i.postimg.cc/vmP1xyWK/pinchos.jpg",
+    "price": 20,
+    "description": "Las brochetas admiten diferentes tipos de carnes: pollo, cerdo, cordero o ternera. La elección depende de la preferencia del comensal",
+    "shoppingCard": true,
+    "availableItems": 9
+}
+],
+
+
+"pescadosmariscos":[
+{
+    "title": "Salmón con verduras",
+    "image": "https://i.postimg.cc/XYcP6j5t/salmon-1.jpg",
+    "price": 20,
+    "description": "Salmón con salsa de naranja · Rollitos de berenjena, espárragos y salmón marinado",
+    "shoppingCard": true,
+    "availableItems": 15
+},
+{
+    "title": "Sardinas al horno con limón",
+    "image": "https://i.postimg.cc/R0SDMkQh/sardinas.jpg",
+    "price": 12,
+    "description": "- El limón y las sardinas son dos aliados perfectos para proporcionarnos un plato de pescado muy sabroso. ",
+    "shoppingCard": true,
+    "availableItems": 3
+},
+{
+    "title": "Merluza al verdeo",
+    "image": "https://i.postimg.cc/9fLNzLJp/ceviche.jpg",
+    "price": 20,
+    "description": " Merluza al papillote con cebolla de verdeo, ajo y perejil",
+    "shoppingCard": true,
+    "availableItems": 9
+}
+],
+  
+
+"ensaladas":[
+{
+    "title": "Cuatro estaciones",
+    "image": "https://i.postimg.cc/J7QndJYL/ensalada1-1.jpg",
+    "price": 20,
+    "description": "Combinación de tomates orgánicos, choclo, pepino, habas, huevos cocidos, tofú,lechuga y remolacha",
+    "shoppingCard": true,
+    "availableItems": 5
+},
+{
+    "title": "Tomatina",
+    "image": "https://i.postimg.cc/9MdM2qWy/ensalada2.jpg",
+    "price": 12,
+    "description": "Variedad de tomates con crutones caseros ",
+    "shoppingCard": true,
+    "availableItems": 7
+},
+{
+    "title": "Palta con mix de granos",
+    "image": "https://i.postimg.cc/Hn3kcD8x/ensalada3.jpg",
+    "price": 7,
+    "description": "Palta acompañada con semillas de sésamo,choclo, arvejas, garbanzos tomate asados y lechuga",
+    "shoppingCard": true,
+    "availableItems": 2
+}
+],
+
+
+
+  "veganos":[
+    {
+      "title": "Hamburguesa Vegana",
+      "image": "https://i.postimg.cc/zf6ykrfP/garbanzo.jpg",
+      "price": 16,
+      "description": "hamburguesa de garbanzos y zanahorias, cebolla, tofú, lechuga y tomate ",
+      "shoppingCard": true,
+      "availableItems": 15
+    },
+    {
+      "title": "Pizza de remolacha",
+      "image": "https://https://i.postimg.cc/DZG8jMJf/pizza.jpg",
+      "price": 12,
+      "description": "Base de remolacha y quesos, con una cobertura de garbanzos, brotes verdes, palta y salsa de especias secreto de la casa ",
+      "shoppingCard": true,
+      "availableItems": 7
+    },
+    {
+      "title": "Tacos con soja texturizadas",
+      "image": "https://i.postimg.cc/nLCs7znD/tacos.jpg",
+      "price": 20,
+      "description": "Variedad de tacos, queso vegano, soja texturizada, palta, salsa picante, tomates, choclo y porotos rojos. ",
+      "shoppingCard": true,
+      "availableItems": 2
+    }
+  ]
+}

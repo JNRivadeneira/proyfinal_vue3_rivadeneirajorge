@@ -4,19 +4,20 @@ import { useRouter } from 'vue-router';
 import { useUserStore } from '../stores/UserStore';
 import { useCartStore } from '../stores/CartStore';
 import CartWidget from './CartWidget.vue';
+import { Dropdown, ListGroup, ListGroupItem } from 'flowbite-vue'
 
 const userStore = useUserStore()
 const cartStore = useCartStore()
 const router = useRouter()
 
-function logOut(){
+function logOut() {
   console.log(`${userStore.getActiveUser} ha cerrado sesión!`)
   userStore.setActiveUser(null)
   cartStore.removeAllItems()
   router.push("/")
 }
 
-function prueba(){
+function prueba() {
   console.log(cartStore.getItemsCount)
   console.log(cartStore.isEmpty)
 }
@@ -40,7 +41,7 @@ function prueba(){
           <RouterLink to="/" class="p-2 text-terciary hover:text-primary">
             Home
           </RouterLink>
-          <RouterLink to="/about" class="p-2 text-terciary hover:text-primary">
+          <!-- <RouterLink to="/about" class="p-2 text-terciary hover:text-primary">
             About
           </RouterLink>
           <RouterLink to="/prueba" class="p-2 text-terciary hover:text-primary">
@@ -48,41 +49,60 @@ function prueba(){
           </RouterLink>
           <RouterLink to="/menu" class="p-2 text-terciary hover:text-primary">
             Menu
-          </RouterLink>
+          </RouterLink> -->
+          
           <RouterLink to="/menu/entradas" class="p-2 text-terciary hover:text-primary">
             Entradas
           </RouterLink>
+          <RouterLink to="/menu/carnes" class="p-2 text-terciary hover:text-primary">
+            Carnes
+          </RouterLink>
+          <RouterLink to="/menu/ensaladas" class="p-2 text-terciary hover:text-primary">
+            Ensaladas
+          </RouterLink>
+          <RouterLink to="/menu/pastas" class="p-2 text-terciary hover:text-primary">
+            Pastas
+          </RouterLink>
+          <RouterLink to="/menu/veganos" class="p-2 text-terciary hover:text-primary">
+            Veganos
+          </RouterLink>
+          <RouterLink to="/menu/pescadosmariscos" class="p-2 text-terciary hover:text-primary">
+            Pescados/Mariscos
+          </RouterLink>
           <RouterLink to="/registro" class="p-2 text-terciary hover:text-primary">
             Registro
+          </RouterLink>
+          <RouterLink to="/newproduct" class="p-2 text-terciary hover:text-primary">
+            Nuevo Producto
           </RouterLink>
         </div>
       </div>
     </div>
     <div id="top_right_menu" class="flex items-center justify-between w-56 mr-2">
       <div id="user_panel" class="flex items-center justify-between w-2/3 lg:w-full gap-1">
-          <div id="hiUser" class="flex-none">
-            Hola {{ userStore.getActiveUser }}!
+        <div id="hiUser" class="flex-none">
+          Hola {{ userStore.getActiveUser }}!
+        </div>
+        <div id="cartIcon" class="flex">
+          <!-- <CartIcon :itemsCount="cartStore.getItemsCount" @click="prueba" /> -->
+          <CartWidget />
+        </div>
+        <div id="log_buttons" class="hidden lg:flex">
+          <div id="logout_button" v-if="userStore.getActiveUser">
+            <router-link to="/"
+              class="flex text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"
+              @click="logOut">
+              Salir
+            </router-link>
           </div>
-          <div id="cartIcon" class="flex">
-            <!-- <CartIcon :itemsCount="cartStore.getItemsCount" @click="prueba" /> -->
-            <CartWidget />
-          </div>
-          <div id="log_buttons" class="hidden lg:flex">
-            <div id="logout_button" v-if="userStore.getActiveUser">
-              <router-link to="/"
-                class="flex text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"
-                @click="logOut">
-                Salir
-              </router-link>
-            </div>
-            <div id="login_button" v-else="">
-              <router-link to="/"
-                class="text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">
-                Login
-              </router-link>
-            </div>
+          <div id="login_button" v-else="">
+            <router-link to="/"
+              class="text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">
+              Login
+            </router-link>
           </div>
         </div>
+      </div>
       <div id="ham_button" class="flex lg:hidden">
         <button
           class="flex items-center px-3 py-2 border rounded text-terciary border-terciary bg-contrast hover:border-white hover:bg-contrast-down"
@@ -101,21 +121,30 @@ function prueba(){
         <RouterLink to="/" class="text-terciary hover:text-primary p-2 block">
           Home
         </RouterLink>
-        <RouterLink to="/about" class=" text-terciary hover:text-primary p-2 block">
-          About
-        </RouterLink>
-        <RouterLink to="/prueba" class=" text-terciary hover:text-primary p-2 block">
-          Prueba
-        </RouterLink>
-        <RouterLink to="/menu" class=" text-terciary hover:text-primary p-2 block">
-          Menu
-        </RouterLink>
-        <RouterLink to="/menu/entradas" class=" text-terciary hover:text-primary p-2 block">
-          Entradas
-        </RouterLink>
-        <RouterLink to="/registro" class=" text-terciary hover:text-primary p-2 block">
-          Registro
-        </RouterLink>
+        <RouterLink to="/menu/entradas" class="p-2 text-terciary hover:text-primary">
+            Entradas
+          </RouterLink>
+          <RouterLink to="/menu/carnes" class="p-2 text-terciary hover:text-primary">
+            Carnes
+          </RouterLink>
+          <RouterLink to="/menu/ensaladas" class="p-2 text-terciary hover:text-primary">
+            Ensaladas
+          </RouterLink>
+          <RouterLink to="/menu/pastas" class="p-2 text-terciary hover:text-primary">
+            Pastas
+          </RouterLink>
+          <RouterLink to="/menu/veganos" class="p-2 text-terciary hover:text-primary">
+            Veganos
+          </RouterLink>
+          <RouterLink to="/menu/pescadosmariscos" class="p-2 text-terciary hover:text-primary">
+            Pescados/Mariscos
+          </RouterLink>
+          <RouterLink to="/registro" class="p-2 text-terciary hover:text-primary">
+            Registro
+          </RouterLink>
+          <RouterLink to="/newproduct" class="p-2 text-terciary hover:text-primary">
+            Nuevo Producto
+          </RouterLink>
       </div>
       <div v-if="userStore.getActiveUser" id="logout_button">
         <RouterLink to="/"

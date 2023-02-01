@@ -28,6 +28,9 @@ const count = ref(0)
       <div v-if="product.rating">
         <RatingStars />
       </div>
+      <div>
+      <p>{{ product.description }}</p>
+      </div>
       <div v-if="product.shoppingCard" >
         <div id="product_price" class="text-2xl font-bold text-gray-900 dark:text-white">AR$
           {{ product.price }}</div>
