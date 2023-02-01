@@ -26,6 +26,46 @@ const router = createRouter({
       component: () => import(/* webpackChunkName: "menuEntradas" */ '../views/MenuEntradasView.vue')
     },
     {
+      path: '/menu/carnes',
+      name: 'menuCarnes',
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import(/* webpackChunkName: "menuCarnes" */ '../views/MenuCarnesView.vue')
+    },
+    {
+      path: '/menu/ensaladas',
+      name: 'menuEnsaladas',
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import(/* webpackChunkName: "menuEnsaladas" */ '../views/MenuEnsaladasView.vue')
+    },
+    {
+      path: '/menu/pastas',
+      name: 'menuPastas',
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import(/* webpackChunkName: "menuPastas" */ '../views/MenuPastasView.vue')
+    },
+    {
+      path: '/menu/veganos',
+      name: 'menuVeganos',
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import(/* webpackChunkName: "menuVeganos" */ '../views/MenuVeganosView.vue')
+    },
+    {
+      path: '/menu/pescadosmariscos',
+      name: 'menuPescadosMariscos',
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import(/* webpackChunkName: "menuPescadosMariscos" */ '../views/MenuPescadosMariscosView.vue')
+    },
+    {
       path: '/menu',
       name: 'menu',
       // route level code-splitting

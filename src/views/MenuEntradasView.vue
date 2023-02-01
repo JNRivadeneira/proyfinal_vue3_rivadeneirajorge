@@ -1,8 +1,9 @@
 <script setup>
-import MenuEntradas from '../components/MenuEntradas.vue'
+import MenuComponent from '../components/MenuComponent.vue';
 
 </script>
 
 <template>
-    <MenuEntradas />
+  <h1>Entradas</h1>
+  <MenuComponent :menu="'entradas'" />
 </template>

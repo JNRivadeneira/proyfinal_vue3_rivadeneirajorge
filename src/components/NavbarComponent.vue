@@ -40,7 +40,7 @@ function prueba(){
           <RouterLink to="/" class="p-2 text-terciary hover:text-primary">
             Home
           </RouterLink>
-          <RouterLink to="/about" class="p-2 text-terciary hover:text-primary">
+          <!-- <RouterLink to="/about" class="p-2 text-terciary hover:text-primary">
             About
           </RouterLink>
           <RouterLink to="/prueba" class="p-2 text-terciary hover:text-primary">
@@ -48,9 +48,24 @@ function prueba(){
           </RouterLink>
           <RouterLink to="/menu" class="p-2 text-terciary hover:text-primary">
             Menu
-          </RouterLink>
+          </RouterLink> -->
           <RouterLink to="/menu/entradas" class="p-2 text-terciary hover:text-primary">
             Entradas
+          </RouterLink>
+          <RouterLink to="/menu/carnes" class="p-2 text-terciary hover:text-primary">
+            Carnes
+          </RouterLink>
+          <RouterLink to="/menu/ensaladas" class="p-2 text-terciary hover:text-primary">
+            Ensaladas
+          </RouterLink>
+          <RouterLink to="/menu/pastas" class="p-2 text-terciary hover:text-primary">
+            Pastas
+          </RouterLink>
+          <RouterLink to="/menu/veganos" class="p-2 text-terciary hover:text-primary">
+            Veganos
+          </RouterLink>
+          <RouterLink to="/menu/pescadosmariscos" class="p-2 text-terciary hover:text-primary">
+            Pescados/Mariscos
           </RouterLink>
           <RouterLink to="/registro" class="p-2 text-terciary hover:text-primary">
             Registro
