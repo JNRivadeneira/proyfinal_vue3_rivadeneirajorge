@@ -6,7 +6,7 @@ const userStore = useUserStore()
 </script>
 
 <template>
-  <img class="fondo" src="background.jpg">
+  <img class="fondo" src="/background.jpg">
   <div v-if="userStore.getActiveUser">
     <navbar-component-vue />
   </div>
