@@ -10,3 +10,8 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 # URL de la app
 
 > https://boisterous-chaja-75de2b.netlify.app/
+
+### Descripción de la aplicación
+
+Está destinada a servir de carta electrónica para un establecimiento gastronómico. Los clientes podrán seleccionar alguno de los platos disponibles.
+El usuario puede iniciar sesión con su cuenta, o crear una nueva, para poder navegar entre las opciones. Podrá agregar sus productos seleccionados a un carrito, para luego finalizar su pedido.
