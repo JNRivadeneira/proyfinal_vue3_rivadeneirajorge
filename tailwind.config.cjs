@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require("tailwindcss/defaultTheme")
 
 module.exports = {
   content: [
@@ -8,6 +8,7 @@ module.exports = {
     "./src/**/*.{vue,js,ts,jsx,tsx,html}",
     "./node_modules/tw-elements/dist/js/**/*.js",
     "./node_modules/flowbite/**/*.js",
+    "./node_modules/flowbite-vue/**/*.{js,jsx,ts,tsx}",
   ],
   plugins:[
     require("tw-elements/dist/plugin"),
