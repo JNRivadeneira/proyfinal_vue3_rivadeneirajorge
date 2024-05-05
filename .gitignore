@@ -26,4 +26,4 @@ dist-ssr
 # mis archivos exceptuados
 
 src/components/pruebas/*
-package-lock.json
+./package-lock.json
