@@ -69,8 +69,11 @@ function prueba() {
           <RouterLink to="/menu/pescadosmariscos" class="p-2 text-terciary hover:text-primary">
             Pescados/Mariscos
           </RouterLink>
-          <RouterLink to="/registro" class="p-2 text-terciary hover:text-primary">
+          <!-- <RouterLink to="/registro" class="p-2 text-terciary hover:text-primary">
             Registro
+          </RouterLink> -->
+          <RouterLink v-if="userStore.getActiveUser == 'admin'" to="/newproduct" class="p-2 text-terciary hover:text-primary">
+            Nuevo Producto
           </RouterLink>
           <RouterLink to="/newproduct" class="p-2 text-terciary hover:text-primary">
             Nuevo Producto
@@ -139,10 +142,10 @@ function prueba() {
           <RouterLink to="/menu/pescadosmariscos" class="p-2 text-terciary hover:text-primary">
             Pescados/Mariscos
           </RouterLink>
-          <RouterLink to="/registro" class="p-2 text-terciary hover:text-primary">
+          <!-- <RouterLink to="/registro" class="p-2 text-terciary hover:text-primary">
             Registro
-          </RouterLink>
-          <RouterLink to="/newproduct" class="p-2 text-terciary hover:text-primary">
+          </RouterLink> -->
+          <RouterLink v-if="userStore.getActiveUser == 'admin'" to="/newproduct" class="p-2 text-terciary hover:text-primary">
             Nuevo Producto
           </RouterLink>
       </div>
