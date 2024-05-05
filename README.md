@@ -5,3 +5,13 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 ## Recommended IDE Setup
 
 - [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+
+
+# URL de la app
+
+> https://boisterous-chaja-75de2b.netlify.app/
+
+### Descripción de la aplicación
+
+Está destinada a servir de carta electrónica para un establecimiento gastronómico. Los clientes podrán seleccionar alguno de los platos disponibles.
+El usuario puede iniciar sesión con su cuenta, o crear una nueva, para poder navegar entre las opciones. Podrá agregar sus productos seleccionados a un carrito, para luego finalizar su pedido.

@@ -75,6 +75,9 @@ function prueba() {
           <RouterLink v-if="userStore.getActiveUser == 'admin'" to="/newproduct" class="p-2 text-terciary hover:text-primary">
             Nuevo Producto
           </RouterLink>
+          <RouterLink to="/newproduct" class="p-2 text-terciary hover:text-primary">
+            Nuevo Producto
+          </RouterLink>
         </div>
       </div>
     </div>
