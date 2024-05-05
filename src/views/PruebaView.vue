@@ -4,5 +4,5 @@ import PruebaComponent from '../components/PruebaComponent.vue'
 </script>
 
 <template>
-    <PruebaComponent />
+  <PruebaComponent />
 </template>

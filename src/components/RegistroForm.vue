@@ -1,7 +1,12 @@
 <template>
-    <Vueform>
-    <StaticElement name="titulo"><h1>Crear cuenta</h1></StaticElement>
-    <GroupElement name="informacionPersonal" label="Información Personal">
+  <Vueform>
+    <StaticElement name="titulo">
+      <h1>Crear cuenta</h1>
+    </StaticElement>
+    <GroupElement
+      name="informacionPersonal"
+      label="Información Personal"
+    >
       <TextElement
         name="nombre"
         placeholder="Nombre"
@@ -14,8 +19,8 @@
         rules="required"
         :columns="6"
       />
-    <!-- </GroupElement> -->
-    <!-- <GroupElement name="informacionCuenta" label=""> -->
+      <!-- </GroupElement> -->
+      <!-- <GroupElement name="informacionCuenta" label=""> -->
       <TextElement
         name="email"
         placeholder="Email"
@@ -23,7 +28,11 @@
         :debounce="300"
         validate-on="change"
       />
-      <DateElement name="fechaNacimiento" placeholder="Fecha de nacimiento" rules="required"/>
+      <DateElement
+        name="fechaNacimiento"
+        placeholder="Fecha de nacimiento"
+        rules="required"
+      />
       <TextElement
         name="password"
         input-type="password"
@@ -47,17 +56,26 @@
       />
     </GroupElement>
 
-    <ToggleElement name="notificame" :default="true">
+    <ToggleElement
+      name="notificame"
+      :default="true"
+    >
       Quiero recibir correos con ofertas especiales. Podés desuscribirte en
       cualquier momento.
     </ToggleElement>
-    <ButtonElement name="crearUsuario" add-class="mt-2" submits>
+    <ButtonElement
+      name="crearUsuario"
+      add-class="mt-2"
+      submits
+    >
       Crear
     </ButtonElement>
     <StaticElement name="linkToLogin">
-        <router-link to="/login">Ya tengo una cuenta</router-link>
+      <router-link to="/login">
+        Ya tengo una cuenta
+      </router-link>
     </StaticElement>
-    </Vueform>
+  </Vueform>
 </template>
 
 <script>

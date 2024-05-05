@@ -7,8 +7,7 @@ const props = defineProps({
 </script>
 
 <template>
-  
- <h1>Bienvenido {{ props.activeUser }}!</h1>
+  <h1>Bienvenido {{ props.activeUser }}!</h1>
 </template>
 
 <style scoped>

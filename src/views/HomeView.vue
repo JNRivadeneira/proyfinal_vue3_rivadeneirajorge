@@ -13,7 +13,10 @@ const goToLoginView = () => { router.push("/login") }
 </script>
 
 <template>
-    <HomeComponent v-if="userStore.getActiveUser" :active-user="userStore.getActiveUser"/>
-    <!-- <LandingPageComponent /> -->
-    <LoginForm v-else="" />
+  <HomeComponent
+    v-if="userStore.getActiveUser"
+    :active-user="userStore.getActiveUser"
+  />
+  <!-- <LandingPageComponent /> -->
+  <LoginForm v-else="" />
 </template>

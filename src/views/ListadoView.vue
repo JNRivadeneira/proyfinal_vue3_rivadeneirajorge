@@ -4,5 +4,5 @@ import ListadoComponent from '../components/ListadoComponent.vue';
 </script>
 
 <template>
-    <ListadoComponent />
+  <ListadoComponent />
 </template>

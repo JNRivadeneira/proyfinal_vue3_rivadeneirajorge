@@ -15,9 +15,14 @@ const toggle = () => { active.value = !active.value }
 </script>
 
 <template>
- <CartWidget />
- <button id="over" @click="active = !active">{{ active }}</button>
- <!-- <AppModalOverlay :active="active" @close="active = false">
+  <CartWidget />
+  <button
+    id="over"
+    @click="active = !active"
+  >
+    {{ active }}
+  </button>
+  <!-- <AppModalOverlay :active="active" @close="active = false">
  hola mundo
  </AppModalOverlay> -->
 </template>

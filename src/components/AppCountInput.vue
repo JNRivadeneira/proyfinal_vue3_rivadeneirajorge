@@ -17,8 +17,10 @@ const updateValue = (value) => {
 
 <template>
   <div class="flex flex-row">
-    <a class="flex justify-center cursor-pointer basis-1/3 bg-primary hover:bg-secondary text-secondary hover:text-primary px-2 rounded-tl-lg"
-    @click="updateValue(modelValue > 0 ? modelValue - 1 : null)"><ChevronDoubleDownIcon class="h-7 w-7"/>
+    <a
+      class="flex justify-center cursor-pointer basis-1/3 bg-primary hover:bg-secondary text-secondary hover:text-primary px-2 rounded-tl-lg"
+      @click="updateValue(modelValue > 0 ? modelValue - 1 : null)"
+    ><ChevronDoubleDownIcon class="h-7 w-7" />
     </a>
     <input
       class="flex basis-1/3 text-primary text-center"
@@ -26,13 +28,14 @@ const updateValue = (value) => {
       type="number"
       min="0"
       :max="availableItems"
-      @input="updateValue($event.target.value)"
       readonly
-    />
-    <a class="flex justify-center cursor-pointer basis-1/3 bg-primary hover:bg-secondary text-secondary hover:text-primary px-2 rounded-tr-lg"
-      @click="updateValue(modelValue + 1)"><ChevronDoubleUpIcon class="h-7 w-7"/>
+      @input="updateValue($event.target.value)"
+    >
+    <a
+      class="flex justify-center cursor-pointer basis-1/3 bg-primary hover:bg-secondary text-secondary hover:text-primary px-2 rounded-tr-lg"
+      @click="updateValue(modelValue + 1)"
+    ><ChevronDoubleUpIcon class="h-7 w-7" />
     </a>
-    
   </div>
 </template>
 

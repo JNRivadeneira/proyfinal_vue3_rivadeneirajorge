@@ -4,5 +4,5 @@ import LoginForm from '../components/forms/LoginForm.vue';
 </script>
 
 <template>
-    <LoginForm />
+  <LoginForm />
 </template>

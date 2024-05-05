@@ -12,11 +12,14 @@ defineEmits(["updateCount", "clear"]);
   <tr>
     <td>{{ product.title }}</td>
     <td>
-      <AppCountInput :model-value="count" @update:modelValue="$emit('updateCount', $event)" />
+      <AppCountInput
+        :model-value="count"
+        @update:model-value="$emit('updateCount', $event)"
+      />
     </td>
     <td>$ {{ count * product.price }}</td>
     <td @click="$emit('clear')">
-      <TrashIcon class=""/>
+      <TrashIcon class="" />
     </td>
   </tr>
 </template>

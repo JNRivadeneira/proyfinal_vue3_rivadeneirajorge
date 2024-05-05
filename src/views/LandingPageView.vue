@@ -24,9 +24,19 @@ const validateUser = (whoIsLogging) => {
     <h1>Landing Page</h1>
     <h3>Bienvenido, {{ userStore.getActiveUser }}</h3>
     <div class="grid gap-4 mt-10 w-full place-content-center">
-      <input type="text" placeholder="nombre" v-model="whoIsLogging.nombre" />
-      <input type="password" placeholder="contraseña" v-model="whoIsLogging.password" />
-      <button @click="validateUser(whoIsLogging)">Iniciar sesión</button>
+      <input
+        v-model="whoIsLogging.nombre"
+        type="text"
+        placeholder="nombre"
+      >
+      <input
+        v-model="whoIsLogging.password"
+        type="password"
+        placeholder="contraseña"
+      >
+      <button @click="validateUser(whoIsLogging)">
+        Iniciar sesión
+      </button>
       <button>Registrarse</button>
       <button>Cerrar sesión</button>
     </div>

@@ -9,13 +9,22 @@ const emits = defineEmits(["close"])
 </script>
 
 <template>
-  <div v-if="active" class="modal-overlay">
-    <div class="modal-overlay-bg" @click="$emit('close')"></div>
+  <div
+    v-if="active"
+    class="modal-overlay"
+  >
+    <div
+      class="modal-overlay-bg"
+      @click="$emit('close')"
+    />
     <div class="modal-overlay-content">
-      <span class="close" @click="$emit('close')">
+      <span
+        class="close"
+        @click="$emit('close')"
+      >
         <XCirlcleIcon />
       </span>
-      <slot></slot>
+      <slot />
     </div>
   </div>
 </template>
