@@ -2,9 +2,17 @@ import globals from "globals";
 import pluginJs from "@eslint/js";
 import pluginVue from "eslint-plugin-vue";
 
-
 export default [
-  {languageOptions: { globals: globals.browser }},
   pluginJs.configs.recommended,
-  ...pluginVue.configs["flat/essential"],
+  ...pluginVue.configs["flat/recommended"],
+  {
+    languageOptions: { 
+      globals: globals.browser
+    },
+    files: ["src/**/*.js"],
+    ignores: ["**/*.config.js", "!**/eslint.config.js"],
+    rules: {
+      semi: "error"
+    } 
+  },
 ];
